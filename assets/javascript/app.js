@@ -14,7 +14,7 @@ var config = {
     event.preventDefault();
     var trainName = $("#name-input").val().trim()
     var dest = $("#destination-input").val().trim()
-    var firstTrain = moment($("#firstTrain-input").val().trim(), "HH:MM").subtract(10, "years").format("X");
+    var firstTrain = moment($("#firstTrain-input").val().trim(), "hh:mm").subtract(10, "years").format("X");
     var freq = $("#frequency-input").val().trim()
 
     var newTrain = {
@@ -32,3 +32,18 @@ var config = {
     $("#frequency-input").val("")
 
   })
+
+  database.ref().on("child_added", function(snapshot){
+      var name = snapshot.val().name;
+      var destination = snapshot.val().destination;
+      var firstTrain = snapshot.val().firstTrain;
+      var frequency = snapshot.val().freq;
+
+      var remainder = moment().diff(moment.unix(firstTrain), "minutes")%frequency;
+      var minutes = frequency - remainder;
+      var arrival = moment().add(minutes,"m").format("hh:mm A");
+
+      $("#traintable > tBody").append("<tr><td>"+name+"</td><td>"+destination+"</td><td>"+frequency+"</td><td>"+arrival+"</td><td>"+minutes+"</td><td>")
+  })
+
+  
