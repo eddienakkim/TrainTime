@@ -5,10 +5,41 @@
 }
 
 body {
-    background: url("../images/background.jpg")
+    background: url("../images/background.jpg");
 }
 
-.container {
+#main {
     background-color: white;
     opacity: 80%;
+    border: solid;
+    border-width: 15px;
+    padding: 25px;
+    font-family: 'Lobster', cursive;
+}
+
+.title {
+    text-align: center;
+    vertical-align: center;
+}
+
+.title h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 100px;
+}
+
+.jumbotron h4 {
+    font-family: 'Piedra', cursive;
+    font-size: 50px;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 80px;
+}
+
+hr {
+    border-style: solid;
+    border-width: 5px;
+    border-left: none;
+    border-right: none;
 }
