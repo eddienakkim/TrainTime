@@ -23,7 +23,8 @@ var config = {
         firstTrain: firstTrain,
         frequency: freq
     }
-
+    
+    
     database.ref().push(newTrain)
 
     $("#name-input").val("")
@@ -37,7 +38,7 @@ var config = {
       var name = snapshot.val().name;
       var destination = snapshot.val().destination;
       var firstTrain = snapshot.val().firstTrain;
-      var frequency = snapshot.val().freq;
+      var frequency = snapshot.val().frequency;
 
       var remainder = moment().diff(moment.unix(firstTrain), "minutes")%frequency;
       var minutes = frequency - remainder;
