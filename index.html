@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src=“https://momentjs.com/downloads/moment.js”></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
 </head>
 <body>
@@ -52,19 +53,19 @@
                         <form>
                             <div class="form-group">
                                 <label for="">Train Name</label>
-                                <input type="text" class="form-control" name="name-input">
+                                <input type="text" class="form-control" id="name-input">
                             </div>
                             <div class="form-group">
                                 <label for="">Destination</label>
-                                <input type="text" class="form-control" name="destination-input">
+                                <input type="text" class="form-control" id="destination-input">
                             </div>
                             <div class="form-group">
                                 <label for="">First Train Time (HH:MM format)</label>
-                                <input type="text" class="form-control" name="firstTrain-input">
+                                <input type="text" class="form-control" id="firstTrain-input">
                             </div>
                             <div class="form-group">
                                 <label for="">Frequency (Min)</label>
-                                <input type="text" class="form-control" name="frequency-input">
+                                <input type="text" class="form-control" id="frequency-input">
                             </div>
                             <button type="submit" class="btn btn-primary" id="submitbtn">Submit!</button>
                         </form>
